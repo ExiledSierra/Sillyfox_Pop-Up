@@ -34,7 +34,6 @@
 
         const imgSrc = GM_getResourceURL("praiseImage");
 
-        // 1. Create the background overlay
         const overlay = document.createElement('div');
         overlay.id = 'firefox-praise-overlay';
         Object.assign(overlay.style, {
@@ -43,7 +42,6 @@
             justifyContent: 'center', alignItems: 'center', fontFamily: 'sans-serif'
         });
 
-        // 2. Create the inner box
         const box = document.createElement('div');
         Object.assign(box.style, {
             background: '#1e1e2e', color: '#cdd6f4', padding: '30px',
@@ -51,21 +49,21 @@
             boxShadow: '0 8px 32px rgba(0,0,0,0.5)', maxWidth: '400px'
         });
 
-        // 3. Create the image
+        // Creates the image
         const img = document.createElement('img');
         img.src = imgSrc;
         Object.assign(img.style, {
             width: '300px', height: 'auto', marginBottom: '20px', borderRadius: '8px'
         });
 
-        // 4. Create the heading text
+        // Creates the heading text
         const heading = document.createElement('h2');
         heading.textContent = "Who's a good boy~~.";
         Object.assign(heading.style, {
             fontSize: '24px', margin: '0 0 20px 0'
         });
 
-        // 5. Create the button
+        // Creates the button and its text
         const btn = document.createElement('button');
         btn.id = 'praise-close-btn';
         btn.textContent = 'I am~ :3';
@@ -74,19 +72,16 @@
             fontSize: '16px', borderRadius: '6px', cursor: 'pointer'
         });
 
-        // Add the close functionality
         btn.onclick = function() {
             overlay.remove();
         };
 
-        // 6. Assemble everything and inject it into the page
         box.append(img, heading, btn);
         overlay.appendChild(box);
         document.body.appendChild(overlay);
     }
 
     function checkTimer() {
-        // STRICT CHECK: Only run if this specific tab is actively being used
         if (!document.hasFocus()) return;
 
         if (document.getElementById('firefox-praise-overlay')) return;
