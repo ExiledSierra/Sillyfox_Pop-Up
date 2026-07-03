@@ -9,7 +9,7 @@
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_getResourceURL
-// @resource     praiseImage https://github.com/ExiledSierra/Sillyfox_Pop-Up/blob/0dbcd2624e01d33192bee80cae21e8c8401751f8/images/goodboy.jpg
+// @resource     praiseImage https://i.imgur.com/K66noSa_d.jpeg?maxwidth=520&shape=thumb&fidelity=high
 // ==/UserScript==
 
 (function() {
