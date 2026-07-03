@@ -2,12 +2,13 @@
 // @name         Firefox Praise Popup :3
 // @namespace    https://github.com/ExiledSierra
 // @version      1.6.1
-// @description  A simple pop-up script meant for silly firefox users. can be configured for other browsers. Art by ldev
+// @description  A simple pop-up script meant for silly firefox users. Its literally just a customizable pop-up system. can be configured for other browsers. Art by ldev
 // @match        *://*/*
 // @noframes
 // @run-at       document-end
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @license      MIT
 // ==/UserScript==
 
 (function() {
